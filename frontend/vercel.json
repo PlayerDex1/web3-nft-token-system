@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "installCommand": "npm install",
+  "framework": "create-react-app",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://seu-backend.vercel.app/api/$1"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://seu-backend.vercel.app"
+  }
+}

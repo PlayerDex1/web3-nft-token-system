@@ -11,7 +11,13 @@
     "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
     "frontend": "cd frontend && npm start",
     "backend": "cd backend && npm start",
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "./build.sh",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm install --production",
+    "vercel:deploy": "vercel --prod",
+    "vercel:deploy:frontend": "cd frontend && vercel --prod",
+    "vercel:deploy:backend": "cd backend && vercel --prod"
   },
   "keywords": ["nft", "token", "web3", "blockchain", "ethereum"],
   "author": "Seu Nome",
