@@ -1,0 +1,30 @@
+{
+  "name": "web3-nft-token-system",
+  "version": "1.0.0",
+  "description": "Sistema completo para mintar NFTs e fazer claim de tokens Web3",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network testnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && npm start",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "keywords": ["nft", "token", "web3", "blockchain", "ethereum"],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "hardhat": "^2.17.1",
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "ethers": "^6.7.1",
+    "web3": "^4.1.1"
+  }
+}
+
